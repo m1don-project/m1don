@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 # Netscape HTTP Cookie File
+=======
+# Netscape HTTP Cookie File
+>>>>>>> c5dd15e62cd9c1a5d1e3d146a2fb320956f4f8a2
 .youtube.com TRUE / FALSE 0 cookie_name cookie_value
