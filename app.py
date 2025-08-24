@@ -7,7 +7,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-# Spotify API ключи (замените на ваши, если нужно)
+# Spotify API ключи (замените на свои, если нужно)
 SPOTIFY_CLIENT_ID = 'cc7178053fc144e4882daa5d29caa285'
 SPOTIFY_CLIENT_SECRET = 'ed6bf45b1e3f41ab84edf3aa2a697fa8'
 
@@ -125,11 +125,12 @@ def download_youtube(filetype, video_id):
             ydl_opts.update({
                 'format': 'bestaudio',
                 'outtmpl': tmp_file,
-                'postprocessors': [{
-                    'key': 'FFmpegExtractAudio',
-                    'preferredcodec': 'mp3',
-                    'preferredquality': '192',
-                }],
+                # Временное удаление постпроцессинга MP3 из-за отсутствия ffmpeg
+                # 'postprocessors': [{
+                #     'key': 'FFmpegExtractAudio',
+                #     'preferredcodec': 'mp3',
+                #     'preferredquality': '192',
+                # }],
             })
         else:
             ydl_opts.update({
